@@ -1,0 +1,44 @@
+.profile h1,
+h2 {
+    text-align: center;
+}
+
+.about h2,
+p {
+
+    background-color: rgb(255, 255, 255);
+
+    text-align : center;
+    display    : block;
+    align-items: center;
+    margin     : auto;
+    width      : 89%;
+
+
+}
+
+.menuName,
+.menuPrice,
+.buttonRow {
+    padding         : 25px;
+    text-align      : left;
+    border          : 1px solid black;
+    border-collapse : collapse;
+    background-color: #eee;
+    width           : 10%;
+}
+
+.addToOrder {
+    background-color: #000000;
+    color           : white;
+    padding         : 16px 20px;
+    margin          : 2px 0;
+    border          : none;
+    cursor          : pointer;
+    width           : 100%;
+    opacity         : 0.9;
+}
+
+.main_content {
+    text-align: center;
+}
