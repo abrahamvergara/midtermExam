@@ -13,6 +13,7 @@ import firebase from "./utils/firebase";
 //Pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Service from "./pages/Service"
 
 import Registration from "./pages/Registration";
 
@@ -63,6 +64,7 @@ function App() {
         <PublicRouter component={Registration} isAuth={state.isAuth} restricted={true} path="/registration" exact/>
         
         <PrivateRouter component={Home} isAuth={state.isAuth} path="/home" exact/>
+        <PrivateRouter component={Service} isAuth={state.isAuth} path="/service" exact/>
 
         <Route component={NotFound} />
       </Switch>
