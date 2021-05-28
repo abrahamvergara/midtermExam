@@ -2,6 +2,29 @@ import React from 'react'
 import Nav from "../Components/nav"
 export default function Service() {
 
+
+    const Confirm = (e) => {
+        e.preventDefault();
+    
+        if(Math.floor((Math.random(Confirm) * 5+1))){
+            alert("Your Schedule is Tuesday")
+        }else if(Math.floor((Math.random(Confirm)* 5+1))){
+            alert("Your Schedule is Wednesday")
+        }
+        else if(Math.floor((Math.random(Confirm)* 5+1))){
+            alert("Your Schedule is Thursday")
+        }
+        else if(Math.floor((Math.random(Confirm)* 5+1))){
+            alert("Your Schedule is Friday")
+        }
+        else if(Math.floor((Math.random(Confirm)* 5+1))){
+            alert("Your Schedule is Saturday")
+        }
+        else{
+            alert("Your schedule is Sunday")
+        }
+    }
+
     return (
 
         <div>
@@ -34,9 +57,12 @@ export default function Service() {
                     <label htmlFor="text">Deworm</label>
                     <input type="checkbox"></input><br/>
                 </div>
+
             </div><br/>
 
-            <button>Confirm</button>
+            <button onClick={Confirm}>Confirm</button>
+
         </div>
     )
 }
+
