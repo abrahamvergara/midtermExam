@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from "../Components/nav";
+import firebase from "firebase";
 
 //import pic from "../images/Screenshot (393).png"
 
@@ -17,10 +18,35 @@ export default function Home() {
     }
 
 
+    const [state, setState] = useState({
+        user: null
+    });
+
+    useEffect(() => {
+        var signedUser = firebase.auth().currentUser;
+
+        if (signedUser ) {
+        // User is signed in.
+        setState({user : signedUser} )
+        } else {    
+        // No user is signed in.
+        setState(null)
+        }
+        //console.log(signedUser ) 
+        
+    }, []);
+
+
+
     return (
         <div class = "div1">
             <Nav />
-            <h1> What is your pet? </h1>
+            
+            <div>
+            <h1>Welcome  {state.user ? state.user.email: "null"} </h1>
+            </div>
+
+            <h3> What is your pet? </h3>
 
             <span class="span1">{pet}</span>
 
