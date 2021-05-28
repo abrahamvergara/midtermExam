@@ -53,12 +53,12 @@ input[type=password]:focus {
   opacity: 1;
 }
 
-/* Add a blue text color to links */
+
 a {
   color: rgb(89, 0, 255);
 }
 
-/* Set a grey background color and center the text of the "sign in" section */
+
 .signin {
   background-color: #cccccc;
   text-align      : center;
