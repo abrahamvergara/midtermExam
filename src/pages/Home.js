@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect} from 'react'
 import Nav from "../Components/nav";
 import firebase from "firebase";
+import { Link } from 'react-router-dom';
 
 //import pic from "../images/Screenshot (393).png"
 
@@ -51,9 +52,9 @@ export default function Home() {
             <span class="span1">{pet}</span>
 
               <button onClick={selectDog}>DOG </button>
-              <button onClick={selectCat}> CAT</button>
+              <button onClick={selectCat}> CAT</button><br/>
               
-              <button> NEXT</button>
+              <Link to ="/service">Next </Link>
         </div>
     )
 }

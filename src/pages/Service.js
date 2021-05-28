@@ -34,7 +34,7 @@ export default function Service() {
                     <label htmlFor="text">Deworm</label>
                     <input type="checkbox"></input><br/>
                 </div>
-            </div>
+            </div><br/>
 
             <button>Confirm</button>
         </div>
